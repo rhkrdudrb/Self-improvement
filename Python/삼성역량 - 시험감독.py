@@ -17,27 +17,16 @@
 출력
 각 시험장마다 응시생을 모두 감독하기 위해 필요한 감독관의 최소 수를 출력한다.'''
 
-
 # 13458번 : 시험 감독
-n= int(input())
-target = list(map(int, input().split())) #리스트 입력
-a, b = map(int, input().split())         #공백기준 입력 값
+n = int(input())
+target = list(map(int, input().split()))  #리스트 입력
+a, b = map(int, input().split())  #공백기준 입력 값
 cnt = n
-for i  in target :
-  i -= a                  #응시자수 - 총감독관 수
-  if i > 0 :              #응시자수 - 총감독관 수 뺀 값이 응시자가 더 많을 경우 
-    if i % a:             #응시자수 % 총감독관 을 나눴을때 나머지 값이 0이상일 응시자 수가 더 많음 부감독관 필요
-      cnt += (i // b) + 1 # 나눈값이 1 이상이므로 몫+1
-    else:
-      cnt += (i // b) #나눈값이 딱 떨어지므로 몫만 저장
+for i in target:
+    i -= a  #응시자수 - 총감독관 수
+    if i > 0:  #응시자수 - 총감독관 수 뺀 값이 응시자가 더 많을 경우
+        if i % a:  #응시자수 % 총감독관 을 나눴을때 나머지 값이 0이상일 응시자 수가 더 많음 부감독관 필요
+            cnt += (i // b) + 1  # 나눈값이 1 이상이므로 몫+1
+        else:
+            cnt += (i // b)  #나눈값이 딱 떨어지므로 몫만 저장
 print(cnt)
-
-      
-      
-    
-    
-
-
-
-
-
