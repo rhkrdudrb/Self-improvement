@@ -1,4 +1,3 @@
-a = float(input())
-b = float(input())
-
-print(a+b)
+a=input()
+a=int(a,16)
+print("%o"%a)
