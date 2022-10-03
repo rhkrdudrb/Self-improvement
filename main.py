@@ -1,3 +1,9 @@
-a=input()
-a=int(a,16)
-print("%o"%a)
+a,b = map(int,input().split())
+if a != b:
+  print("True")
+else:
+ print("False")
+  
+  
+
+
