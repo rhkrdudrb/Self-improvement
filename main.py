@@ -1,6 +1,9 @@
-n = int(input())
-s = 0
-for i in range(1, n+1):
-  if i%2==0:
-    s = s+i
-print(s)  
+r,g,b = map(int, input().split())
+for i in range(r):
+  for j in range(g):
+    for k in range(b):
+      print(i,j,k)
+print(r*g*b)    
+
+
+
